@@ -1,0 +1,49 @@
+#include <iostream>
+#include "Functions.h"
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int poka1 = 1;
+	while (poka1)
+	{
+		int ros;
+		rosdilcout();
+		cin >> ros;
+		int poka = 0;
+		while (poka == 0)
+		{
+			if (ros == 1 || ros == 2 || ros == 4 || ros == 3)
+				poka = 1;
+			else
+			{
+				cout << "You have entered wrong number. Please enter number again." << endl;
+				cin >> ros;
+			}
+		}
+
+		switch (ros)
+		{
+		case 1:
+			solution1();
+			break;
+		case 2:
+			solution2();
+			break;
+		case 3:
+			solution3();
+			break;
+		case 4:
+			solution4();
+			break;
+		default:
+			cout << "No such topic." << endl;
+			break;
+		}
+		cout << "If you want to run code again enter 1.\nElse enter 0." << endl;
+		cin >> poka1;
+	}
+	return 0;
+}
